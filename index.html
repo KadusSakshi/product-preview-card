@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Card</title>
+    
+    <style>
+        #main-product-image{
+            width:400px;
+            height:400px;
+            object-fit:cover;
+            border: 1px solid black;
+            border-radius:20px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,25);
+            display: block;
+            margin: 20px auto;
+        }
+       .Product-image{
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+        }
+        .Product-image-containe{
+         display:flex;
+        justify-content:center;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <img src="https://images.meesho.com/images/products/447809292/5wfqr_512.webp" id="main-product-image"/>
+        <div class="Product-image-container">
+            <center>
+            <img src="https://images.meesho.com/images/products/447809292/5wfqr_512.webp" class="Product-image" onclick="changeImage(1)"/> 
+            <img src="https://images.meesho.com/images/products/447809292/u4gcs_512.webp" class="Product-image" onclick="changeImage(2)"/> 
+            <img src="https://images.meesho.com/images/products/447809292/e1rlt_512.webp" class="Product-image" onclick="changeImage(3)"/> 
+            <img src="https://images.meesho.com/images/products/447809292/wetcn_512.webp" class="Product-image" onclick="changeImage(4)"/>
+           </center>
+        </div>
+        <script>
+            function changeImage(num){
+                const mainimage=document.getElementById('main-product-image');
+                if(num==1){
+                    mainimage.src="https://images.meesho.com/images/products/447809292/5wfqr_512.webp";
+                }
+               else if(num==2){
+                    mainimage.src="https://images.meesho.com/images/products/447809292/u4gcs_512.webp";
+                }
+                else if(num==3){
+                    mainimage.src="https://images.meesho.com/images/products/447809292/e1rlt_512.webp";
+                }
+                else if(num==4){
+                    mainimage.src="https://images.meesho.com/images/products/447809292/wetcn_512.webp";
+               }
+            }
+           </script>
+        </body>
+    </html>
